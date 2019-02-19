@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  #nm{
+  	text-align: center;
+  	margin-left: 5px;
+  	width:15%;
+  	color: black;
+  	border:2px solid black;
+  	background: yellow;
+  }
+  #op{
+  	text-align: center;
+  	margin-left: 5px;
+  	font-size: 25px;
+  	width:15%;
+  	color: black;
+  	border:2px solid black;
+  	background:  lightgrey;
+  }
+  .patt{
+  	font-size: 25px;
+  	margin-top: 20%;
+  	text-align: center;
+  	
+  }
+  .patt {
+  	background: grey;
+  	margin: 30%;
+
+  }
+  #lcd{
+  	width:68%;
+
+  	margin-top: 5%;
+  	color: black;
+  	text-align: right;
+  	border:2px solid black;
+  }
+</style>
+
+</head>
+
+<body>
+
+ <div class="container-fluid "style="background: grey;">
+ 	<form name="lcdform">  
+     
+     
+      
+     <div class="patt">
+     	 <input id="lcd" name="lcds" id="lc" value="" >  <br><br> 
+         <input type="button" value="1" id="nm"name="" onclick="numone()"> 
+    	 <input type="button" value="2"id="nm" onclick="numtwo()"> 
+    	 <input type="button" value="3" id="nm"onclick="numthree()">
+    	 <input type="button" value="+" id="op" onclick="plus()">
+    	<br><br>    
+
+
+
+    	 <input type="button" value="4" id="nm" onclick="numfour()">  
+    	 <input type="button" value="5" id="nm" onclick="numfive()">
+    	 <input type="button" value="6" id="nm" onclick="numsix()">
+    	 <input type="button" value="-" id="op" onclick="sub()">
+    	 <br><br>  
+
+
+    	 <input type="button" value="7" id="nm" onclick="numseven()">
+    	 <input type="button" value="8" id="nm" onclick="numeight()">  
+    	 <input type="button" value="9" id="nm" onclick="numnine()">
+    	 <input type="button" value="*" id="op" onclick="mul()"> 
+      <br><br>
+
+
+       
+        <input type="button" value="0" id="nm" onclick="numzero()"> 
+        <input type="button" value="c" id="op" onclick="clr()"> 
+        <input type="button" value="/" id="op" onclick="divide()"> 
+        <input type="button" value="=" id="op" onclick="equalsto()"> <br><br>
+    </div>
+  
+    </form> 
+    </div>  
+    <script>  
+  
+      
+
+        function numone()
+        {
+        	document.lcdform.lcd.value += "1";
+        }
+         function numtwo()
+        {
+        	document.lcdform.lcd.value+="2";
+        }
+         function numthree()
+        {
+        	document.lcdform.lcd.value+="3";
+        }
+         function numfour()
+        {
+        	document.lcdform.lcd.value+="4";
+        }
+         function numfive()
+        {
+        	document.lcdform.lcd.value+="5";
+        }
+         function numsix()
+        {
+        	document.lcdform.lcd.value+="6";
+        }
+         function numseven()
+        {
+        	document.lcdform.lcd.value+="7";
+        }
+         function numeight()
+        {
+        	document.lcdform.lcd.value+="8";
+        }
+         function numnine()
+        {
+        	document.lcdform.lcd.value+="9";
+        }
+         function plus()
+        {
+        	document.lcdform.lcd.value+="+";
+        }
+         function sub()
+        {
+        	document.lcdform.lcd.value+="-";
+        }
+         function cap()
+        {
+        	document.lcdform.lcd.value+="^";
+        }
+         function mul()
+        {
+        	document.lcdform.lcd.value+="*";
+        }
+         function divide()
+        {
+        	document.lcdform.lcd.value+="/";
+        }
+         function sqrt()
+        {
+        	document.lcdform.lcd.value+="sqrt()";
+        }
+         function per()
+        {
+        	document.lcdform.lcd.value+="%";
+        }
+         function numzero()
+        {
+        	document.lcdform.lcd.value+="0";
+        }
+         function numdobuzero()
+        {
+        	document.lcdform.lcd.value+="00";
+        }
+         function clr()
+        {
+        	document.lcdform.lcd.value=" ";
+        }
+         function equalsto()
+        {
+        	var sub=eval(document.lcdform.lcd.value)
+        	document.lcdform.lcd.value=sub;
+        }
+
+    </script>
+
+</body>
+</html>
